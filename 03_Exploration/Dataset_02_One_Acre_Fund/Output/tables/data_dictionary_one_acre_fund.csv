@@ -1,0 +1,54 @@
+Kolom,Tipe Data,Kategori,Dugaan Makna,Satuan,Peran Potensial,Status,Catatan
+country,string (categorical),Identitas & Lokasi,Nama negara tempat plot survei berada,Kategorikal,Stratifikasi / Konteks Regional,Terkonfirmasi,7 negara Afrika Sub-Sahara
+iso,string (categorical),Identitas & Lokasi,Kode ISO 3166-1 alpha-3 negara,Kode 3-huruf,Redundan dengan country,Terkonfirmasi,"KEN, TZA, RWA, ZMB, BDI, NGA, UGA"
+cz,integer,Identitas & Lokasi,Crop Zone / Agro-ecological Zone ID,Kode Zona,Prediktor Lingkungan Makro,Terkonfirmasi,28 zona agroklimat
+strat,string,Identitas & Lokasi,"Strata sampling survei (kombinasi negara, cz, season)",Kode Strata,Bobot survei / Identitas,Terkonfirmasi,Missing 17.13%
+lon,float,Identitas & Lokasi,Garis bujur (Longitude) kluster plot,Derajat Desimal (°E),Spasial,Terkonfirmasi,Rentang 5.216 s.d. 37.828
+lat,float,Identitas & Lokasi,Garis lintang (Latitude) kluster plot,Derajat Desimal (°N/°S),Spasial,Terkonfirmasi,Rentang -14.994 s.d. 9.760
+year,integer,Waktu & Musim,Tahun pelaksanaan survei/panen,Tahun kalender,Temporal / Tren,Terkonfirmasi,2016-2022 (2021 absen)
+season,string (categorical),Waktu & Musim,Siklus musim tanam,Kategorikal,Konteks Kalender Tanam,Terkonfirmasi,"first season (94%), second season (6%)"
+plant_date,date (string),Waktu & Musim,Tanggal penanaman jagung,YYYY-MM-DD,Waktu Tanam,Terkonfirmasi,Missing 24.33%
+harvest_date,date (string),Waktu & Musim,Tanggal panen jagung,YYYY-MM-DD,Data Leakage (Post-Harvest),Terkonfirmasi,Missing 30.38%; Hanya diketahui setelah panen
+plant_date_dev,float,Waktu & Musim,Deviasi tanggal tanam terhadap titik acuan referensi,Hari (Days),Kandidat Prediktor Musiman,Belum Terverifikasi (Provisional),Rentang -108 s.d. +97 hari; formula dan titik acuan referensi belum memiliki dokumentasi resmi
+plant_doy,float,Waktu & Musim,Hari ke-berapa dalam tahun saat tanam (Day of Year),Hari (1-365),Kandidat Prediktor Musiman,Terkonfirmasi,Representasi numerik kalender tanam
+elev,integer,Topografi & Tanah,Ketinggian tempat di atas permukaan laut,Meter (mdpl),Prediktor Topografi Kuat,Terkonfirmasi,Rentang 67 s.d. 2.742 mdpl
+twi,float,Topografi & Tanah,Topographic Wetness Index (kecenderungan akumulasi air),Indeks (dimensionless),Prediktor Drainase/Hidrologi,Terkonfirmasi,Rentang 5.09 s.d. 13.82
+soil_rzpawhc,float,Topografi & Tanah,Root Zone Plant Available Water Holding Capacity,Milimeter (mm),Prediktor Retensi Air Tanah,Terkonfirmasi,Missing 30.06%
+soil_clay,float,Topografi & Tanah,Persentase fraksi liat tanah,Persen (%),Prediktor Tekstur Tanah,Terkonfirmasi,Missing 30.06%; 12% - 51%
+soil_pH,float,Topografi & Tanah,Tingkat keasaman tanah (pH H2O),Skala pH (1-14),Prediktor Kesuburan Kimia,Terkonfirmasi,Missing 30.06%; mean 5.71 (masam)
+soil_orgC,float,Topografi & Tanah,Kandungan Karbon Organik Tanah (Soil Organic Carbon),g/kg (permil),Prediktor Bahan Organik,Belum Terverifikasi (Provisional),Missing 30.06%; mean 14.07 g/kg; interpretasi satuan g/kg berdasarkan rentang agronomis mineral
+soil_ECEC,float,Topografi & Tanah,Effective Cation Exchange Capacity (KTK Efektif),cmol(+)/kg,Prediktor Kapasitas Kation,Terkonfirmasi,Missing 30.06%; mean 11.04
+avg_season_gdd,float,Iklim & Lingkungan,Akumulasi satuan panas pertumbuhan (Growing Degree Days),°C-days,Prediktor Termal Tanaman,Terkonfirmasi,Missing 0.28%
+avg_season_ai,float,Iklim & Lingkungan,Aridity Index rata-rata musim (P / PET),Indeks (dimensionless),Prediktor Ketersediaan Air,Terkonfirmasi,Missing 0.28%; mean 1.21 (sub-humid)
+avg_season_tavg,float,Iklim & Lingkungan,Suhu udara rata-rata selama musim tanam,Derajat Celsius (°C),Prediktor Iklim Makro,Terkonfirmasi,Missing 0.28%; mean 19.82°C (dataran tinggi)
+season_prec,float,Iklim & Lingkungan,Total curah hujan selama satu musim tanam,Milimeter (mm),Prediktor Presipitasi In-Season,Terkonfirmasi,Lengkap 100%; mean 934 mm
+season_prec_1,float,Iklim & Lingkungan,Curah hujan pada fase pertumbuhan awal (tertile 1),Milimeter (mm),Prediktor Fase Vegetatif Awal,Terkonfirmasi,Lengkap 100%; mean 322 mm
+season_prec_2,float,Iklim & Lingkungan,Curah hujan pada fase pertengahan/berbunga (tertile 2),Milimeter (mm),Prediktor Fase Pembungaan Kritis,Terkonfirmasi,Lengkap 100%; mean 404 mm
+season_prec_3,float,Iklim & Lingkungan,Curah hujan pada fase pematangan/akhir (tertile 3),Milimeter (mm),Prediktor Fase Pengisian Biji,Terkonfirmasi,Lengkap 100%; mean 208 mm
+hybrid,boolean / object,Benih & Varietas,Indikator penggunaan benih jagung hibrida,Biner (True/False),Prediktor Pre-Planting,Terkonfirmasi,"True=72.7%, False=19.0%, Null=8.3%"
+hyb_type,string (categorical),Benih & Varietas,"Tipe silangan hibrida (3-way, double cross, single)",Kategorikal,Karakteristik Genetik Detil,Terkonfirmasi,Missing 82.52% (sangat tinggi)
+hyb_mat,float,Benih & Varietas,Rating/kelompok kematangan varietas hibrida,Skala Diskrit (0.5 - 3.0),Prediktor Pre-Planting,Belum Terverifikasi (Provisional),Missing 47.95%; skala diskrit 0.5-3.0 belum memiliki buku kode resmi One Acre Fund
+hyb_yor,float,Benih & Varietas,Year of Release (Tahun pelepasan varietas resmi),Tahun rilis,Indikator Modernitas Benih,Terkonfirmasi,Missing 53.50%; rentang 1981-2017
+hyb_tol_mln,boolean / object,Benih & Varietas,Toleransi varietas terhadap Maize Lethal Necrosis,Biner (True/False),Ketahanan Penyakit Spesifik,Terkonfirmasi,Missing 48.68%
+hyb_tol_msv,boolean / object,Benih & Varietas,Toleransi varietas terhadap Maize Streak Virus,Biner (True/False),Ketahanan Penyakit Spesifik,Terkonfirmasi,Missing 48.68%
+hyb_tol_gls,boolean / object,Benih & Varietas,Toleransi varietas terhadap Grey Leaf Spot,Biner (True/False),Ketahanan Penyakit Spesifik,Terkonfirmasi,Missing 48.68%
+hyb_tol_nclb,boolean / object,Benih & Varietas,Toleransi terhadap Northern Corn Leaf Blight,Biner (True/False),Ketahanan Penyakit Spesifik,Terkonfirmasi,Missing 48.68%
+hyb_tol_rust,boolean / object,Benih & Varietas,Toleransi varietas terhadap Karat Daun (Common Rust),Biner (True/False),Ketahanan Penyakit Spesifik,Terkonfirmasi,Missing 48.68%
+hyb_tol_ear_rot,boolean / object,Benih & Varietas,Toleransi terhadap Busuk Tongkol (Ear Rot),Biner (True/False),Ketahanan Penyakit Spesifik,Terkonfirmasi,Missing 48.68%
+pl_m2,float,Budidaya & Pemupukan,Populasi tanaman per meter persegi (Plant Density),Tanaman / m²,Prediktor In-Season,Terkonfirmasi,Missing 31.19%; mean 3.63 pl/m²
+row_spacing,float,Budidaya & Pemupukan,Jarak antar baris tanam,Centimeter (cm),Prediktor In-Season,Terkonfirmasi,Missing 42.88%; mean 78.5 cm
+N_kg_ha,float,Budidaya & Pemupukan,Dosis pupuk Nitrogen unsur murni per hektar,kg N / ha,Prediktor In-Season / Budidaya,Terkonfirmasi,Lengkap 100%; mean 30.34 kg/ha
+P_kg_ha,float,Budidaya & Pemupukan,Dosis pupuk Fosfat per hektar,kg P / ha,Prediktor In-Season / Budidaya,Terkonfirmasi,Lengkap 100%; mean 16.43 kg/ha
+K_kg_ha,float,Budidaya & Pemupukan,Dosis pupuk Kalium per hektar,kg K / ha,Prediktor In-Season,Terkonfirmasi,Missing 24.89%; mayoritas nol (68.5%)
+compost,boolean / object,Budidaya & Pemupukan,Indikator pengaplikasian kompos organik,Biner (True/False),Manajemen Kesuburan Organik,Terkonfirmasi,Missing 39.29%
+comp_kg_ha,float,Budidaya & Pemupukan,Dosis aplikasi kompos organik per hektar,kg Kompos / ha,Dosis Organik (In-Season),Terkonfirmasi (Nilai Ekstrem Anomali),"Missing 52.30%; terdapat anomali nilai maksimum 166.666,55 kg/ha yang wajib diverifikasi pada Data Preparation"
+manure,boolean / object,Budidaya & Pemupukan,Indikator pengaplikasian pupuk kandang padat,Biner (True/False),Praktik Organik Tradisional,Terkonfirmasi,Missing 94.00% (kritis)
+fert_in_hole,boolean,Budidaya & Pemupukan,Praktik pemupukan microdosing tepat di lubang tanam,Biner (True/False),Teknik Aplikasi Hara,Terkonfirmasi,"Lengkap 100%; True=37.6%, False=62.4%"
+lime_kg_ha,float,Budidaya & Pemupukan,Dosis aplikasi kapur pertanian (pengapuran / liming),kg Kapur / ha,Koreksi Keasaman Tanah,Terkonfirmasi,Missing 9.01%; 88.8% bernilai 0 kg/ha
+weeding,boolean / object,Budidaya & Pemupukan,Pelaksanaan penyiangan gulma oleh petani,Biner (True/False),Manajemen Gulma (In-Season),Terkonfirmasi,Missing 25.76%; True=49.6%
+pesticide,boolean / object,Budidaya & Pemupukan,Pengaplikasian pestisida kimia/organik,Biner (True/False),Proteksi Tanaman (In-Season),Terkonfirmasi,Missing 38.48%; kejadian in-season
+disease,boolean,Tekanan Stres Tanaman,Kejadian serangan penyakit tanaman selama musim,Biner (True/False),Stres Biotik (In-Season),Terkonfirmasi,Lengkap 100%; Terjadi pada 2.58% observasi; informasi in-season
+pest,boolean,Tekanan Stres Tanaman,Kejadian serangan hama selama musim,Biner (True/False),Stres Biotik (In-Season),Terkonfirmasi,Lengkap 100%; Terjadi pada 31.77% observasi; informasi in-season
+striga,boolean / object,Tekanan Stres Tanaman,Serangan gulma parasit Striga hermonthica,Biner (True/False),Stres Biotik Parasitik (In-Season),Terkonfirmasi,Missing 82.91%; informasi in-season
+water_excess,boolean,Tekanan Stres Tanaman,Kejadian genangan air / kelebihan air selama musim,Biner (True/False),Stres Abiotik (In-Season),Terkonfirmasi,Lengkap 100%; Terjadi pada 7.93% observasi; informasi in-season
+yield_kg_ha,float,Hasil Panen (Target),Hasil panen biji jagung kering per hektar,kg / hektar,TARGET PREDIKSI UTAMA,Terkonfirmasi,"Lengkap 100% (tanpa missing value); min=0, mean=2.969 kg/ha"
