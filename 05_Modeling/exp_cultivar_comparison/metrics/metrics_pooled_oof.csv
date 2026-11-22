@@ -1,0 +1,6 @@
+Model,Overall_MAE,Overall_RMSE,Overall_R2,Hybrid_MAE,Hybrid_RMSE,Hybrid_R2,Landrace_MAE,Landrace_RMSE,Landrace_R2
+Baseline (Train Mean),1.657,1.9437,-0.0209,1.5118,1.858,-0.3772,1.8591,2.057,-3.2257
+RF Scenario A (Env+System),1.0202,1.3423,0.5131,1.237,1.5671,0.0203,0.7184,0.944,0.1101
+XGB Scenario A (Env+System),1.0274,1.3442,0.5117,1.2329,1.5616,0.0271,0.7413,0.9629,0.0741
+RF Scenario B (Env+System+Cultivar),0.9913,1.293,0.5482,1.1879,1.4985,0.1041,0.7177,0.9345,0.1279
+XGB Scenario B (Env+System+Cultivar),0.9967,1.2909,0.5497,1.1951,1.4966,0.1064,0.7205,0.9317,0.1331

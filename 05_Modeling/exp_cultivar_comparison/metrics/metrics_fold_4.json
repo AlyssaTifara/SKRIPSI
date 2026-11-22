@@ -1,0 +1,153 @@
+{
+  "fold_id": 4,
+  "train_years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+  ],
+  "test_years": [
+    2018
+  ],
+  "train_rows": 3778,
+  "test_rows": 807,
+  "total_duration_seconds": 12.61,
+  "model_durations": {
+    "rf_scenario_a": 4.15,
+    "xgb_scenario_a": 1.32,
+    "rf_scenario_b": 5.53,
+    "xgb_scenario_b": 1.43
+  },
+  "models": {
+    "baseline": {
+      "name": "Training Mean Baseline",
+      "train_mean_yield": 3.6452138644785603,
+      "overall": {
+        "MAE": 1.6304153096548664,
+        "RMSE": 1.926555056068016,
+        "R2": -0.024711637216690896,
+        "N": 807
+      },
+      "by_system": {
+        "Hybrid": {
+          "MAE": 1.5111989266839119,
+          "RMSE": 1.895486404418243,
+          "R2": -0.3252152200711995,
+          "N": 423
+        },
+        "Landrace": {
+          "MAE": 1.7617396065213076,
+          "RMSE": 1.9602092149506691,
+          "R2": -2.569351818853871,
+          "N": 384
+        }
+      }
+    },
+    "rf_scenario_a": {
+      "name": "Random Forest (Scenario A: Env+System)",
+      "scenario": "A",
+      "model_type": "rf",
+      "training_duration_seconds": 4.15,
+      "overall": {
+        "MAE": 0.9746465978622152,
+        "RMSE": 1.3245450674138795,
+        "R2": 0.5156355075862262,
+        "N": 807
+      },
+      "by_system": {
+        "Hybrid": {
+          "MAE": 1.2275855650677576,
+          "RMSE": 1.6024385699649566,
+          "R2": 0.052873807717433774,
+          "N": 423
+        },
+        "Landrace": {
+          "MAE": 0.6960185167998597,
+          "RMSE": 0.9265095821191861,
+          "R2": 0.202585121818191,
+          "N": 384
+        }
+      }
+    },
+    "xgb_scenario_a": {
+      "name": "XGBoost (Scenario A: Env+System)",
+      "scenario": "A",
+      "model_type": "xgb",
+      "training_duration_seconds": 1.32,
+      "overall": {
+        "MAE": 0.9710642542596791,
+        "RMSE": 1.3034634072194506,
+        "R2": 0.5309312439469407,
+        "N": 807
+      },
+      "by_system": {
+        "Hybrid": {
+          "MAE": 1.2149254288233762,
+          "RMSE": 1.567336641740128,
+          "R2": 0.09391353879258069,
+          "N": 423
+        },
+        "Landrace": {
+          "MAE": 0.7024359291543564,
+          "RMSE": 0.9298135262100494,
+          "R2": 0.1968877998297892,
+          "N": 384
+        }
+      }
+    },
+    "rf_scenario_b": {
+      "name": "Random Forest (Scenario B: Env+System+Cultivar)",
+      "scenario": "B",
+      "model_type": "rf",
+      "training_duration_seconds": 5.53,
+      "overall": {
+        "MAE": 0.96950877066885,
+        "RMSE": 1.2952945104015858,
+        "R2": 0.5367921944702171,
+        "N": 807
+      },
+      "by_system": {
+        "Hybrid": {
+          "MAE": 1.2176599014753744,
+          "RMSE": 1.558823853624369,
+          "R2": 0.1037293944215606,
+          "N": 423
+        },
+        "Landrace": {
+          "MAE": 0.6961547906397879,
+          "RMSE": 0.9215499509122688,
+          "R2": 0.21109943940391096,
+          "N": 384
+        }
+      }
+    },
+    "xgb_scenario_b": {
+      "name": "XGBoost (Scenario B: Env+System+Cultivar)",
+      "scenario": "B",
+      "model_type": "xgb",
+      "training_duration_seconds": 1.43,
+      "overall": {
+        "MAE": 0.9807279759977829,
+        "RMSE": 1.287094018386026,
+        "R2": 0.542638753153706,
+        "N": 807
+      },
+      "by_system": {
+        "Hybrid": {
+          "MAE": 1.2322266612492556,
+          "RMSE": 1.5391494524360512,
+          "R2": 0.1262108414791353,
+          "N": 423
+        },
+        "Landrace": {
+          "MAE": 0.7036864555254579,
+          "RMSE": 0.9337509875525525,
+          "R2": 0.1900715540946759,
+          "N": 384
+        }
+      }
+    }
+  }
+}

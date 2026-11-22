@@ -1,0 +1,98 @@
+{
+  "scenario_A": {
+    "name": "Environment + System (without Cultivar)",
+    "description": "Model menggunakan 11 fitur biofisik lingkungan statis dan cuaca pra-tanam 60 hari ditambah klasifikasi sistem budidaya (System), tanpa informasi kultivar.",
+    "numeric_features": [
+      "Clay",
+      "CEC",
+      "SOM",
+      "PH",
+      "Elev",
+      "Slope",
+      "rain_pre60d",
+      "srad_mean_pre60d",
+      "tmax_mean_pre60d",
+      "tmin_mean_pre60d",
+      "vp_mean_pre60d"
+    ],
+    "categorical_features": [
+      "System"
+    ],
+    "total_feature_count": 12
+  },
+  "scenario_B": {
+    "name": "Environment + System + Cultivar",
+    "description": "Model menggunakan 11 fitur biofisik lingkungan dan System seperti pada Skenario A, ditambah fitur Cultivar yang diproses dengan penanganan missing (UNKNOWN), rare (<5 train fold) ke RARE_OR_UNSEEN, dan unseen test ke RARE_OR_UNSEEN.",
+    "numeric_features": [
+      "Clay",
+      "CEC",
+      "SOM",
+      "PH",
+      "Elev",
+      "Slope",
+      "rain_pre60d",
+      "srad_mean_pre60d",
+      "tmax_mean_pre60d",
+      "tmin_mean_pre60d",
+      "vp_mean_pre60d"
+    ],
+    "categorical_features": [
+      "System",
+      "Cultivar"
+    ],
+    "total_feature_count": 13
+  },
+  "cultivar_rules": {
+    "missing_policy": "Impute with 'UNKNOWN'",
+    "rare_policy": "Categories with count < 5 in training fold are mapped to 'RARE_OR_UNSEEN'",
+    "unseen_test_policy": "Categories in test set not in training fold frequent categories (>=5) are mapped to 'RARE_OR_UNSEEN'",
+    "leakage_prevention": "Thresholding and vocabulary strictly fitted on training fold data only."
+  },
+  "excluded_features": [
+    "Field_ID",
+    "Lat",
+    "Long",
+    "Mun_yield",
+    "Year",
+    "Nitrogen",
+    "Phosphorus",
+    "Potassium",
+    "Planting",
+    "Tillage"
+  ],
+  "models": {
+    "RandomForest": {
+      "class": "RandomForestRegressor",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 2,
+        "max_features": 1.0,
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    "XGBoost": {
+      "class": "XGBRegressor",
+      "params": {
+        "n_estimators": 300,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": 4,
+        "verbosity": 0
+      }
+    }
+  },
+  "validation": {
+    "scheme": "Expanding Temporal Validation (Out-Of-Year)",
+    "folds": [
+      {"fold": 1, "train": [2012, 2013, 2014], "test": [2015]},
+      {"fold": 2, "train": [2012, 2013, 2014, 2015], "test": [2016]},
+      {"fold": 3, "train": [2012, 2013, 2014, 2015, 2016], "test": [2017]},
+      {"fold": 4, "train": [2012, 2013, 2014, 2015, 2016, 2017], "test": [2018]}
+    ]
+  }
+}

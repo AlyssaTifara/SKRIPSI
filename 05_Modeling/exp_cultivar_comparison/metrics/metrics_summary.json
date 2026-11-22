@@ -1,0 +1,309 @@
+{
+  "experiment": "exp_cultivar_comparison",
+  "evaluated_at": "2026-11-22T19:00:12.974296",
+  "total_test_observations": 3007,
+  "pooled_metrics": {
+    "Baseline (Train Mean)": {
+      "Overall": {
+        "MAE": 1.6569578653713255,
+        "RMSE": 1.9436776088111773,
+        "R2": -0.020918134436524793,
+        "N": 3007
+      },
+      "Hybrid": {
+        "MAE": 1.511760186080434,
+        "RMSE": 1.8580039907721695,
+        "R2": -0.37723918163809933,
+        "N": 1750
+      },
+      "Landrace": {
+        "MAE": 1.8591026058319942,
+        "RMSE": 2.0570193711559064,
+        "R2": -3.225700463775933,
+        "N": 1257
+      }
+    },
+    "RF Scenario A (Env+System)": {
+      "Overall": {
+        "MAE": 1.0202297823264286,
+        "RMSE": 1.3422706231249413,
+        "R2": 0.513119225737281,
+        "N": 3007
+      },
+      "Hybrid": {
+        "MAE": 1.2370016711104712,
+        "RMSE": 1.5670919380145094,
+        "R2": 0.02027308884675405,
+        "N": 1750
+      },
+      "Landrace": {
+        "MAE": 0.7184391654830918,
+        "RMSE": 0.9439642500528563,
+        "R2": 0.11011673416341694,
+        "N": 1257
+      }
+    },
+    "XGB Scenario A (Env+System)": {
+      "Overall": {
+        "MAE": 1.0274081539990023,
+        "RMSE": 1.3441889242197118,
+        "R2": 0.5117265835889362,
+        "N": 3007
+      },
+      "Hybrid": {
+        "MAE": 1.2329312704000002,
+        "RMSE": 1.5616487889205897,
+        "R2": 0.02706725072851779,
+        "N": 1750
+      },
+      "Landrace": {
+        "MAE": 0.7412781192322991,
+        "RMSE": 0.9628634842046087,
+        "R2": 0.07412708510277477,
+        "N": 1257
+      }
+    },
+    "RF Scenario B (Env+System+Cultivar)": {
+      "Overall": {
+        "MAE": 0.9913371940394039,
+        "RMSE": 1.2930199008072167,
+        "R2": 0.5481930853755692,
+        "N": 3007
+      },
+      "Hybrid": {
+        "MAE": 1.187865381851966,
+        "RMSE": 1.4985140765581184,
+        "R2": 0.10414496578171706,
+        "N": 1750
+      },
+      "Landrace": {
+        "MAE": 0.7177299317705221,
+        "RMSE": 0.9344898203628392,
+        "R2": 0.12789034243036457,
+        "N": 1257
+      }
+    },
+    "XGB Scenario B (Env+System+Cultivar)": {
+      "Overall": {
+        "MAE": 0.9966744964649152,
+        "RMSE": 1.290901086185483,
+        "R2": 0.5496725842722301,
+        "N": 3007
+      },
+      "Hybrid": {
+        "MAE": 1.1950791785714288,
+        "RMSE": 1.4966237843131003,
+        "R2": 0.1064036829573034,
+        "N": 1750
+      },
+      "Landrace": {
+        "MAE": 0.7204547719729515,
+        "RMSE": 0.9316954915514097,
+        "R2": 0.13309814152377764,
+        "N": 1257
+      }
+    }
+  },
+  "per_fold_summary": [
+    {
+      "Fold": 1,
+      "Test_Year": 2015,
+      "Test_N": 424,
+      "Model": "Baseline (Train Mean)",
+      "MAE": 1.3657,
+      "RMSE": 1.6812,
+      "R2": -0.0008,
+      "Duration_sec": 0.0
+    },
+    {
+      "Fold": 1,
+      "Test_Year": 2015,
+      "Test_N": 424,
+      "Model": "RF Scenario A (Env+System)",
+      "MAE": 1.4424,
+      "RMSE": 1.7559,
+      "R2": -0.0917,
+      "Duration_sec": 1.86
+    },
+    {
+      "Fold": 1,
+      "Test_Year": 2015,
+      "Test_N": 424,
+      "Model": "XGB Scenario A (Env+System)",
+      "MAE": 1.4298,
+      "RMSE": 1.7454,
+      "R2": -0.0787,
+      "Duration_sec": 1.05
+    },
+    {
+      "Fold": 1,
+      "Test_Year": 2015,
+      "Test_N": 424,
+      "Model": "RF Scenario B (Env+System+Cultivar)",
+      "MAE": 1.3648,
+      "RMSE": 1.6509,
+      "R2": 0.035,
+      "Duration_sec": 2.16
+    },
+    {
+      "Fold": 1,
+      "Test_Year": 2015,
+      "Test_N": 424,
+      "Model": "XGB Scenario B (Env+System+Cultivar)",
+      "MAE": 1.3777,
+      "RMSE": 1.6591,
+      "R2": 0.0253,
+      "Duration_sec": 1.14
+    },
+    {
+      "Fold": 2,
+      "Test_Year": 2016,
+      "Test_N": 816,
+      "Model": "Baseline (Train Mean)",
+      "MAE": 1.8066,
+      "RMSE": 2.0602,
+      "R2": -0.1217,
+      "Duration_sec": 0.0
+    },
+    {
+      "Fold": 2,
+      "Test_Year": 2016,
+      "Test_N": 816,
+      "Model": "RF Scenario A (Env+System)",
+      "MAE": 0.8705,
+      "RMSE": 1.1605,
+      "R2": 0.6441,
+      "Duration_sec": 2.31
+    },
+    {
+      "Fold": 2,
+      "Test_Year": 2016,
+      "Test_N": 816,
+      "Model": "XGB Scenario A (Env+System)",
+      "MAE": 0.9292,
+      "RMSE": 1.2193,
+      "R2": 0.6071,
+      "Duration_sec": 1.2
+    },
+    {
+      "Fold": 2,
+      "Test_Year": 2016,
+      "Test_N": 816,
+      "Model": "RF Scenario B (Env+System+Cultivar)",
+      "MAE": 0.8483,
+      "RMSE": 1.1073,
+      "R2": 0.676,
+      "Duration_sec": 2.81
+    },
+    {
+      "Fold": 2,
+      "Test_Year": 2016,
+      "Test_N": 816,
+      "Model": "XGB Scenario B (Env+System+Cultivar)",
+      "MAE": 0.8748,
+      "RMSE": 1.1508,
+      "R2": 0.65,
+      "Duration_sec": 1.2
+    },
+    {
+      "Fold": 3,
+      "Test_Year": 2017,
+      "Test_N": 960,
+      "Model": "Baseline (Train Mean)",
+      "MAE": 1.6808,
+      "RMSE": 1.964,
+      "R2": -0.0127,
+      "Duration_sec": 0.0
+    },
+    {
+      "Fold": 3,
+      "Test_Year": 2017,
+      "Test_N": 960,
+      "Model": "RF Scenario A (Env+System)",
+      "MAE": 0.9993,
+      "RMSE": 1.2892,
+      "R2": 0.5636,
+      "Duration_sec": 3.13
+    },
+    {
+      "Fold": 3,
+      "Test_Year": 2017,
+      "Test_N": 960,
+      "Model": "XGB Scenario A (Env+System)",
+      "MAE": 0.9805,
+      "RMSE": 1.2737,
+      "R2": 0.5741,
+      "Duration_sec": 1.13
+    },
+    {
+      "Fold": 3,
+      "Test_Year": 2017,
+      "Test_N": 960,
+      "Model": "RF Scenario B (Env+System+Cultivar)",
+      "MAE": 0.9663,
+      "RMSE": 1.2572,
+      "R2": 0.585,
+      "Duration_sec": 3.96
+    },
+    {
+      "Fold": 3,
+      "Test_Year": 2017,
+      "Test_N": 960,
+      "Model": "XGB Scenario B (Env+System+Cultivar)",
+      "MAE": 0.9454,
+      "RMSE": 1.2189,
+      "R2": 0.6099,
+      "Duration_sec": 1.34
+    },
+    {
+      "Fold": 4,
+      "Test_Year": 2018,
+      "Test_N": 807,
+      "Model": "Baseline (Train Mean)",
+      "MAE": 1.6304,
+      "RMSE": 1.9266,
+      "R2": -0.0247,
+      "Duration_sec": 0.0
+    },
+    {
+      "Fold": 4,
+      "Test_Year": 2018,
+      "Test_N": 807,
+      "Model": "RF Scenario A (Env+System)",
+      "MAE": 0.9746,
+      "RMSE": 1.3245,
+      "R2": 0.5156,
+      "Duration_sec": 4.15
+    },
+    {
+      "Fold": 4,
+      "Test_Year": 2018,
+      "Test_N": 807,
+      "Model": "XGB Scenario A (Env+System)",
+      "MAE": 0.9711,
+      "RMSE": 1.3035,
+      "R2": 0.5309,
+      "Duration_sec": 1.32
+    },
+    {
+      "Fold": 4,
+      "Test_Year": 2018,
+      "Test_N": 807,
+      "Model": "RF Scenario B (Env+System+Cultivar)",
+      "MAE": 0.9695,
+      "RMSE": 1.2953,
+      "R2": 0.5368,
+      "Duration_sec": 5.53
+    },
+    {
+      "Fold": 4,
+      "Test_Year": 2018,
+      "Test_N": 807,
+      "Model": "XGB Scenario B (Env+System+Cultivar)",
+      "MAE": 0.9807,
+      "RMSE": 1.2871,
+      "R2": 0.5426,
+      "Duration_sec": 1.43
+    }
+  ]
+}

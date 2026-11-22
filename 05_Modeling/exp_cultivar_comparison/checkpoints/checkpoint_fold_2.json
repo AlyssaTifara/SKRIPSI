@@ -1,0 +1,8 @@
+{
+  "fold_id": 2,
+  "status": "COMPLETED",
+  "completed_at": "2026-11-22T18:57:24.871827",
+  "duration_seconds": 7.7,
+  "oof_file": "C:\\SKRIPSI\\05_Modeling\\exp_cultivar_comparison\\predictions\\oof_predictions_fold_2.csv",
+  "metrics_file": "C:\\SKRIPSI\\05_Modeling\\exp_cultivar_comparison\\metrics\\metrics_fold_2.json"
+}

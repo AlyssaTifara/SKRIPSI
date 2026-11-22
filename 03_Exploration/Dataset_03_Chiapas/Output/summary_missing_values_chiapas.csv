@@ -1,0 +1,170 @@
+Variable,Category,Total_Rows,Missing_Count,Missing_Percentage,Data_Type
+Field_ID,Identification / Temporal,4585,0,0.0,int64
+YIELD,Target / Context Yield,4585,0,0.0,float64
+Year,Identification / Temporal,4585,0,0.0,int64
+Mun_yield,Target / Context Yield,4585,0,0.0,float64
+Lat,Spatial / Geography,4585,0,0.0,float64
+Long,Spatial / Geography,4585,0,0.0,float64
+Elev,Spatial / Geography,4585,0,0.0,int64
+System,Agronomic Management,4585,0,0.0,str
+Cultivar,Agronomic Management,4585,310,6.7612,str
+Tillage,Agronomic Management,4585,0,0.0,str
+Planting,Agronomic Management,4585,0,0.0,int64
+Nitrogen,Agronomic Management,4585,0,0.0,float64
+Phosphorus,Agronomic Management,4585,0,0.0,float64
+Potassium,Agronomic Management,4585,0,0.0,float64
+Slope,Soil & Topography,4585,0,0.0,float64
+Clay,Soil & Topography,4585,0,0.0,int64
+CEC,Soil & Topography,4585,0,0.0,float64
+SOM,Soil & Topography,4585,0,0.0,float64
+PH,Soil & Topography,4585,0,0.0,float64
+prcp_V1,Weather - Precipitation,4585,0,0.0,float64
+prcp_V2,Weather - Precipitation,4585,0,0.0,float64
+prcp_V3,Weather - Precipitation,4585,0,0.0,float64
+prcp_V4,Weather - Precipitation,4585,0,0.0,float64
+prcp_V5,Weather - Precipitation,4585,0,0.0,float64
+prcp_V6,Weather - Precipitation,4585,0,0.0,float64
+prcp_V7,Weather - Precipitation,4585,0,0.0,float64
+prcp_V8,Weather - Precipitation,4585,0,0.0,float64
+prcp_V9,Weather - Precipitation,4585,0,0.0,float64
+prcp_V10,Weather - Precipitation,4585,0,0.0,float64
+prcp_V11,Weather - Precipitation,4585,0,0.0,float64
+prcp_V12,Weather - Precipitation,4585,0,0.0,float64
+prcp_V13,Weather - Precipitation,4585,0,0.0,float64
+prcp_V14,Weather - Precipitation,4585,0,0.0,float64
+prcp_V15,Weather - Precipitation,4585,0,0.0,float64
+prcp_V16,Weather - Precipitation,4585,0,0.0,float64
+prcp_V17,Weather - Precipitation,4585,0,0.0,float64
+prcp_V18,Weather - Precipitation,4585,0,0.0,float64
+prcp_V19,Weather - Precipitation,4585,0,0.0,float64
+prcp_V20,Weather - Precipitation,4585,0,0.0,float64
+prcp_V21,Weather - Precipitation,4585,0,0.0,float64
+prcp_V22,Weather - Precipitation,4585,0,0.0,float64
+prcp_V23,Weather - Precipitation,4585,0,0.0,float64
+prcp_V24,Weather - Precipitation,4585,0,0.0,float64
+prcp_V25,Weather - Precipitation,4585,0,0.0,float64
+prcp_V26,Weather - Precipitation,4585,0,0.0,float64
+prcp_V27,Weather - Precipitation,4585,0,0.0,float64
+prcp_V28,Weather - Precipitation,4585,0,0.0,float64
+prcp_V29,Weather - Precipitation,4585,0,0.0,float64
+prcp_V30,Weather - Precipitation,4585,0,0.0,float64
+srad_V1,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V2,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V3,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V4,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V5,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V6,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V7,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V8,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V9,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V10,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V11,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V12,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V13,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V14,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V15,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V16,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V17,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V18,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V19,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V20,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V21,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V22,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V23,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V24,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V25,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V26,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V27,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V28,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V29,Weather - Solar Radiation,4585,0,0.0,float64
+srad_V30,Weather - Solar Radiation,4585,0,0.0,float64
+tmax_V1,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V2,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V3,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V4,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V5,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V6,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V7,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V8,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V9,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V10,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V11,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V12,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V13,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V14,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V15,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V16,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V17,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V18,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V19,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V20,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V21,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V22,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V23,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V24,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V25,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V26,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V27,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V28,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V29,Weather - Max Temperature,4585,0,0.0,float64
+tmax_V30,Weather - Max Temperature,4585,0,0.0,float64
+tmin_V1,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V2,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V3,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V4,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V5,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V6,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V7,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V8,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V9,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V10,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V11,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V12,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V13,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V14,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V15,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V16,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V17,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V18,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V19,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V20,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V21,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V22,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V23,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V24,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V25,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V26,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V27,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V28,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V29,Weather - Min Temperature,4585,0,0.0,float64
+tmin_V30,Weather - Min Temperature,4585,0,0.0,float64
+vp_V1,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V2,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V3,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V4,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V5,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V6,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V7,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V8,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V9,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V10,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V11,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V12,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V13,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V14,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V15,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V16,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V17,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V18,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V19,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V20,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V21,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V22,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V23,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V24,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V25,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V26,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V27,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V28,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V29,Weather - Vapor Pressure,4585,0,0.0,int64
+vp_V30,Weather - Vapor Pressure,4585,0,0.0,int64

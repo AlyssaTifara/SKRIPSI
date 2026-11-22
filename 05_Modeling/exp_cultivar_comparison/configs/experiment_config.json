@@ -1,0 +1,105 @@
+{
+  "dataset": {
+    "path": "C:\\SKRIPSI\\02_Raw_Data\\Dataset_03_Chiapas\\Chiapas_Data.csv",
+    "excel_path": "C:\\SKRIPSI\\02_Raw_Data\\Dataset_03_Chiapas\\Chiapas Field Data 2012-2018.xlsx",
+    "target": "YIELD"
+  },
+  "features": {
+    "numeric_features": [
+      "Clay",
+      "CEC",
+      "SOM",
+      "PH",
+      "Elev",
+      "Slope",
+      "rain_pre60d",
+      "srad_mean_pre60d",
+      "tmax_mean_pre60d",
+      "tmin_mean_pre60d",
+      "vp_mean_pre60d"
+    ],
+    "categorical_features_scenario_a": [
+      "System"
+    ],
+    "categorical_features_scenario_b": [
+      "System",
+      "Cultivar"
+    ],
+    "weather_aggregation_formulas": {
+      "rain_pre60d": "10 * sum(prcp_V1..prcp_V6)",
+      "srad_mean_pre60d": "mean(srad_V1..srad_V6)",
+      "tmax_mean_pre60d": "mean(tmax_V1..tmax_V6)",
+      "tmin_mean_pre60d": "mean(tmin_V1..tmin_V6)",
+      "vp_mean_pre60d": "mean(vp_V1..vp_V6)"
+    },
+    "strictly_excluded": [
+      "Field_ID",
+      "Lat",
+      "Long",
+      "Mun_yield",
+      "Year",
+      "Nitrogen",
+      "Phosphorus",
+      "Potassium",
+      "Planting",
+      "Tillage"
+    ]
+  },
+  "cultivar_policy": {
+    "missing_value_imputation": "UNKNOWN",
+    "training_rare_threshold": 5,
+    "rare_token": "RARE_OR_UNSEEN",
+    "test_unseen_token": "RARE_OR_UNSEEN"
+  },
+  "models": {
+    "RandomForest": {
+      "class": "RandomForestRegressor",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 2,
+        "max_features": 1.0,
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    "XGBoost": {
+      "class": "XGBRegressor",
+      "params": {
+        "n_estimators": 300,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": 4,
+        "verbosity": 0
+      }
+    }
+  },
+  "temporal_validation": {
+    "scheme": "Expanding Temporal Split",
+    "folds": [
+      {
+        "fold": 1,
+        "train_years": [2012, 2013, 2014],
+        "test_years": [2015]
+      },
+      {
+        "fold": 2,
+        "train_years": [2012, 2013, 2014, 2015],
+        "test_years": [2016]
+      },
+      {
+        "fold": 3,
+        "train_years": [2012, 2013, 2014, 2015, 2016],
+        "test_years": [2017]
+      },
+      {
+        "fold": 4,
+        "train_years": [2012, 2013, 2014, 2015, 2016, 2017],
+        "test_years": [2018]
+      }
+    ]
+  }
+}

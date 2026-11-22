@@ -1,0 +1,21 @@
+Fold,Test_Year,Test_N,Model,MAE,RMSE,R2,Duration_sec
+1,2015,424,Baseline (Train Mean),1.3657,1.6812,-0.0008,0.0
+1,2015,424,RF Scenario A (Env+System),1.4424,1.7559,-0.0917,1.86
+1,2015,424,XGB Scenario A (Env+System),1.4298,1.7454,-0.0787,1.05
+1,2015,424,RF Scenario B (Env+System+Cultivar),1.3648,1.6509,0.035,2.16
+1,2015,424,XGB Scenario B (Env+System+Cultivar),1.3777,1.6591,0.0253,1.14
+2,2016,816,Baseline (Train Mean),1.8066,2.0602,-0.1217,0.0
+2,2016,816,RF Scenario A (Env+System),0.8705,1.1605,0.6441,2.31
+2,2016,816,XGB Scenario A (Env+System),0.9292,1.2193,0.6071,1.2
+2,2016,816,RF Scenario B (Env+System+Cultivar),0.8483,1.1073,0.676,2.81
+2,2016,816,XGB Scenario B (Env+System+Cultivar),0.8748,1.1508,0.65,1.2
+3,2017,960,Baseline (Train Mean),1.6808,1.964,-0.0127,0.0
+3,2017,960,RF Scenario A (Env+System),0.9993,1.2892,0.5636,3.13
+3,2017,960,XGB Scenario A (Env+System),0.9805,1.2737,0.5741,1.13
+3,2017,960,RF Scenario B (Env+System+Cultivar),0.9663,1.2572,0.585,3.96
+3,2017,960,XGB Scenario B (Env+System+Cultivar),0.9454,1.2189,0.6099,1.34
+4,2018,807,Baseline (Train Mean),1.6304,1.9266,-0.0247,0.0
+4,2018,807,RF Scenario A (Env+System),0.9746,1.3245,0.5156,4.15
+4,2018,807,XGB Scenario A (Env+System),0.9711,1.3035,0.5309,1.32
+4,2018,807,RF Scenario B (Env+System+Cultivar),0.9695,1.2953,0.5368,5.53
+4,2018,807,XGB Scenario B (Env+System+Cultivar),0.9807,1.2871,0.5426,1.43
